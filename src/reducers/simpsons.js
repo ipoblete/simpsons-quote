@@ -1,4 +1,4 @@
-import { FETCH_QUOTE } from './actions/simpsons';
+import { FETCH_QUOTE } from '../actions/simpsons';
 
 const initialState = {
   quote: '',
@@ -15,5 +15,7 @@ export default function reducer(state = initialState, { type, payload }) {
         characterName: payload.characterName,
         characterImage: payload.characterImage
       };
+    default:
+      return state;
   }
 }
