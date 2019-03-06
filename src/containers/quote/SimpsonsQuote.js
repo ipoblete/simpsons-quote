@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import Quote from '../../components/quote/Quote';
+import Load from '../../components/quote/Load';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getQuote, getCharacterName, getCharacterImage } from '../../selectors/simpsons';
@@ -19,7 +20,10 @@ class SimpsonsQuote extends PureComponent {
 
   render() {
     return (
-      <Quote {...this.props} />
+      <>
+        <Quote {...this.props} />
+        <Load fetch={this.props.fetch} />
+      </>
     );
   }
 }
@@ -40,3 +44,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(SimpsonsQuote);
+
