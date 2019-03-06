@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
   quote: getQuote(state),
   characterImage: getCharacterImage(state),
   characterName: getCharacterName(state),
-  isLoading: isLoading(state)
+  loading: isLoading(state)
 });
 
 const mapDispatchToProps = dispatch => ({
