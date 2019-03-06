@@ -10,12 +10,16 @@ describe('simpsons reducer', () => {
     };
     const fetchedState = reducer(state, {
       type: FETCH_QUOTE,
-      payload: 'this is a quote'
+      payload: {
+        quote: 'this is a quote',
+        character: 'Myself',
+        image: 'http://image.com'
+      }
     });
     expect(fetchedState).toEqual({
       quote: 'this is a quote',
-      characterName: '',
-      characterImage: ''
+      characterName: 'Myself',
+      characterImage: 'http://image.com'
     });
   });
 });
