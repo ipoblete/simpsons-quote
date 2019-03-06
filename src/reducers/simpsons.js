@@ -1,4 +1,4 @@
-
+import { FETCH_QUOTE } from '../actions/simpsons';
 
 const initalState = {
   quote: '',
@@ -8,7 +8,7 @@ const initalState = {
 
 export default function reducer(state = initalState, { type, payload }) {
   switch(type) {
-    case 'FETCH_QUOTE':
+    case FETCH_QUOTE:
       return {
         ...state,
         quote: payload,
