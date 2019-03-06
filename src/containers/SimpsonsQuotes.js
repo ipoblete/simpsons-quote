@@ -4,6 +4,7 @@ import Quote from '../components/quote/Quote';
 import { connect } from 'react-redux';
 import { getQuote, getCharacterImage, getCharacterName } from '../selectors/simpsons';
 import { fetchQuote } from '../actions/simpsons';
+import Load from '../components/Load';
 
 class SimpsonsQuotes extends PureComponent {
   static propTypes = {
@@ -19,7 +20,10 @@ class SimpsonsQuotes extends PureComponent {
 
   render() {
     return (
-      <Quote { ...this.props }/>
+      <>
+        <Load { ...this.props }/>
+        <Quote { ...this.props }/>
+      </>
     );
   }
 }
