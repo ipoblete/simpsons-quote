@@ -21,4 +21,26 @@ describe('reducers', () => {
       quote: 'blah shorts'
     });
   });
+
+  it('updates character name', () => {
+    const action = {
+      type: 'UPDATE_NAME',
+      payload: 'Marge Simpson'
+    };
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      charName: 'Marge Simpson'
+    });
+  });
+
+  it('updates character image', () => {
+    const action = {
+      type: 'UPDATE_IMAGE',
+      payload: 'marge.com'
+    };
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      charImage: 'marge.com'
+    });
+  });
 });
