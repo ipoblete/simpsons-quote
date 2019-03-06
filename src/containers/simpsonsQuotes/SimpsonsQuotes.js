@@ -1,10 +1,14 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Quote from '../components/quote/Quote';
+import Quote from '../../components/quote/Quote';
 import { connect } from 'react-redux';
-import { getQuote, getCharacterImage, getCharacterName } from '../selectors/simpsons';
-import { fetchQuote } from '../actions/simpsons';
-import Load from '../components/quote/Load';
+import { getQuote, getCharacterImage, getCharacterName } from '../../selectors/simpsons';
+import { fetchQuote } from '../../actions/simpsons';
+import Load from '../../components/quote/Load';
+import WithFetch from '../../components/quote/WithFetch';
+
+const InitFetchWithLoading = WithFetch(Quote);
+const ReloadFetchWithLoading = WithFetch(Load);
 
 class SimpsonsQuotes extends PureComponent {
   static propTypes = {
@@ -21,8 +25,8 @@ class SimpsonsQuotes extends PureComponent {
   render() {
     return (
       <>
-        <Load { ...this.props }/>
-        <Quote { ...this.props }/>
+        <ReloadFetchWithLoading { ...this.props }/>
+        <InitFetchWithLoading { ...this.props }/>
       </>
     );
   }
