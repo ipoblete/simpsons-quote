@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Load from './Load';
 
-export default function Quote({ quote, characterName, characterImage }) {
+export default function Quote({ quote, characterName, characterImage, fetch }) {
   return (
     <div>
-      <p>{quote}</p>
+      <q>{quote}</q>
       <p>{characterName}</p>
       <img src={characterImage} />
+      <Load fetch={fetch}/>
     </div>
   );
 }
@@ -14,5 +16,6 @@ export default function Quote({ quote, characterName, characterImage }) {
 Quote.propTypes = {
   quote: PropTypes.string.isRequired,
   characterImage: PropTypes.string.isRequired,
-  characterName: PropTypes.string.isRequired
+  characterName: PropTypes.string.isRequired,
+  fetch: PropTypes.func.isRequired
 };
