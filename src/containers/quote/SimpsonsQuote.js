@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Quote from '../../components/quote/Quote';
+import Load from '../../components/quote/Load';
 import { fetchQuote } from '../../actions/simpsons';
 import { getCharacterImage, getCharacterName, getQuote } from '../../selectors/simpsons';
 
@@ -19,7 +20,10 @@ class SimpsonsQuote extends React.PureComponent {
 
   render() {
     return (
-      <Quote {...this.props } />
+      <Fragment>
+        <Quote {...this.props } />
+        <Load fetch={this.props.fetch} />
+      </Fragment>
     );
   }
 }
