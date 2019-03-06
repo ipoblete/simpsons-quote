@@ -1,5 +1,7 @@
 import React from 'react';
+import SimpsonsQuotes from '../../containers/SimpsonsQuotes';
+
 
 export default function App() {
-  return <h1>Hi</h1>;
+  return <SimpsonsQuotes />;
 }

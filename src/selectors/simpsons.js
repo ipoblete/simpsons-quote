@@ -1,3 +1,3 @@
-export const getQuote = state => state.quote;
-export const getCharacterName = state => state.getCharacterName;
-export const getCharacterImage = state => state.getCharacterImage;
+export const getQuote = state => state.simpsons.quote;
+export const getCharacterName = state => state.simpsons.characterName;
+export const getCharacterImage = state => state.simpsons.characterImage;
