@@ -1,7 +1,8 @@
 import {
   UPDATE_QUOTE,
   UPDATE_NAME,
-  UPDATE_IMAGE
+  UPDATE_IMAGE,
+  FETCH_FACTS
 } from '../actions/simpsons';
 
 const initialState = {
@@ -26,6 +27,13 @@ export default function reducer(state = initialState, { type, payload }) {
       return {
         ...state,
         image: payload
+      };
+    case FETCH_FACTS:
+      return {
+        ...state,
+        quote: payload.quote,
+        name: payload.name,
+        image: payload.image
       };
     default:
       return state;

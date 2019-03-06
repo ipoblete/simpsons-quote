@@ -1,3 +1,5 @@
+import { fetchInfo } from '../services/simpsonsApi';
+
 export const UPDATE_QUOTE = 'UPDATE_QUOTE';
 export const updateQuote = quote => ({
   type: UPDATE_QUOTE,
@@ -14,4 +16,10 @@ export const UPDATE_IMAGE = 'UPDATE_IMAGE';
 export const updateImage = image => ({
   type: UPDATE_IMAGE,
   payload: image
+});
+
+export const FETCH_FACTS = 'FETCH_FACTS';
+export const fetchFacts = () => ({
+  type: FETCH_FACTS,
+  payload: fetchInfo
 });
