@@ -6,8 +6,8 @@ import {
 
 const initialState = {
   quote: '',
-  charName: '',
-  charImage: ''
+  name: '',
+  image: ''
 };
 
 export default function reducer(state = initialState, { type, payload }) {
@@ -20,12 +20,12 @@ export default function reducer(state = initialState, { type, payload }) {
     case UPDATE_NAME:
       return {
         ...state,
-        charName: payload
+        name: payload
       };
     case UPDATE_IMAGE:
       return {
         ...state,
-        charImage: payload
+        image: payload
       };
     default:
       return state;

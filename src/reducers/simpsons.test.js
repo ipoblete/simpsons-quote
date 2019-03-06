@@ -6,8 +6,8 @@ describe('reducers', () => {
   beforeEach(() => {
     state = {
       quote: 'blah',
-      charName: 'Bart Simpson',
-      charImage: 'bart.com'
+      name: 'Bart Simpson',
+      image: 'bart.com'
     };
   });
 
@@ -29,7 +29,7 @@ describe('reducers', () => {
     };
     expect(reducer(state, action)).toEqual({
       ...state,
-      charName: 'Marge Simpson'
+      name: 'Marge Simpson'
     });
   });
 
@@ -40,7 +40,7 @@ describe('reducers', () => {
     };
     expect(reducer(state, action)).toEqual({
       ...state,
-      charImage: 'marge.com'
+      image: 'marge.com'
     });
   });
 });

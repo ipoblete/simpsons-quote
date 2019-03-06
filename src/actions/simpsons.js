@@ -5,7 +5,7 @@ export const updateQuote = quote => ({
 });
 
 export const UPDATE_NAME = 'UPDATE_NAME';
-export const updateCharName = name => ({
+export const updateName = name => ({
   type: UPDATE_NAME,
   payload: name
 });
