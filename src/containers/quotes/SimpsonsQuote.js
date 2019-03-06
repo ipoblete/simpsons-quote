@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Quote from '../../components/quote/Quote';
+import Load from '../../components/quote/Load';
 import { getCharacterName, getImage, getQuote } from '../../selectors/simpsons';
 import { fetchQuote } from '../../actions/simpsons';
 
@@ -29,10 +30,11 @@ class SimpsonsQuote extends PureComponent {
       this.props.fetch();
     }
     render() {
-      const { quote, characterImage, characterName } = this.props;
+      const { quote, characterImage, characterName, fetch } = this.props;
       return (
         <>
           <Quote quote={quote} characterImage={characterImage} characterName={characterName} />
+          <Load fetch={fetch} />
         </>
       );
     }
