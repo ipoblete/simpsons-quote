@@ -7,14 +7,20 @@
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "jest --verbose --passWithNoTests",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "npm run test -- --watch  --updateSnapshot",
     "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
     "build": "webpack -p"
   },
   "jest": {
     "moduleNameMapper": {
       "\\.(css)$": "identity-obj-proxy"
-    }
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>src/setupTests.js"
+    ]
   },
   "keywords": [],
   "author": "Cari Palazzolo",
