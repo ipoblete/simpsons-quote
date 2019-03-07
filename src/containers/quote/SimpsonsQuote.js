@@ -20,7 +20,6 @@ class SimpsonsQuote extends PureComponent {
   render() {
     return (
       < >
-        <button onClick={() => this.props.fetch()}>Refresh</button>
         <Quote {...this.props}/>
       </>
     );
