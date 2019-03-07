@@ -11,35 +11,22 @@ describe('reducers', () => {
     };
   });
 
-  it('updates quote', () => {
-    const action = {
-      type: 'UPDATE_QUOTE',
-      payload: 'blah shorts'
+  it('updates state', () => {
+    const payload = {
+      quote: 'blah2',
+      character: 'Marge Simpson',
+      image: 'marge.com'
     };
-    expect(reducer(state, action)).toEqual({
-      ...state,
-      quote: 'blah shorts'
-    });
-  });
+    const action = {
+      type: 'FETCH_FACTS',
+      payload
+    };
+    const result = reducer(state, action);
 
-  it('updates character name', () => {
-    const action = {
-      type: 'UPDATE_NAME',
-      payload: 'Marge Simpson'
-    };
-    expect(reducer(state, action)).toEqual({
+    expect(result).toEqual({
       ...state,
-      name: 'Marge Simpson'
-    });
-  });
-
-  it('updates character image', () => {
-    const action = {
-      type: 'UPDATE_IMAGE',
-      payload: 'marge.com'
-    };
-    expect(reducer(state, action)).toEqual({
-      ...state,
+      quote: 'blah2',
+      name: 'Marge Simpson',
       image: 'marge.com'
     });
   });
