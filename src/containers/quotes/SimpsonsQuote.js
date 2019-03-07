@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Quote from '../../components/quote/Quote';
 import { fetchQuote }  from '../../action/simpsons';
 import { getQuote, getCharacterName, getImage } from '../../selectors/simpsons';
+// eslint-disable-next-line no-unused-vars
+import Load from '../../components/quote/Load';
 import PropTypes from 'prop-types';
 
 
