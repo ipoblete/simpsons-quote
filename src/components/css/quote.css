@@ -1,0 +1,26 @@
+.quotes {
+  background-color: #0891d6;
+  height: 100vh;
+}
+
+.quotes h1 {
+  text-align: center;
+  background-color: #f4e542;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  border-bottom: #d3c206 solid 3px;
+}
+
+.quotes h2 {
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 20px;
+}
+
+.quotes img {
+  display: block;
+  margin: 0 auto;
+}
