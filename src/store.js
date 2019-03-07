@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers';
 import { middleware } from './middleware';
+import { compose } from 'react-redux';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
