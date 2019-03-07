@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+
+body {
+  background: linear-gradient(to right, #f953c6,#b91d73)
+}
+.image {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homeTitle {
+  text-align: center;
+  padding: 18%;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.homeQuote {
+  text-align: center;
+  font-family: 'Gochi Hand', cursive;
+  letter-spacing: .08em;
+  text-shadow: 1pt 1pt 1pt white; 
+}
+
+.homeName {
+  text-align: center;
+  margin-top: 2em;
+  font-family: 'Gochi Hand', cursive;
+  letter-spacing: .05em;
+  font-size: 50px;
+  text-shadow: 1pt 1pt 1pt white; 
+}
+
+.homeImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 200px;
+}
