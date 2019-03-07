@@ -3,7 +3,7 @@ import { FETCH_QUOTE } from '../action/simpsons';
 const initalState = {
   quote: '',
   characterName: '',
-  characterImage: ''
+  characterImage: '',
 };
 
 export default function reducer(state = initalState, { type, payload }) {
