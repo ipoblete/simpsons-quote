@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Quote({ image, name, quote }) {
   return (
     <>
-      <p>{image}</p>
+      <p><img src={image}/></p>
       <p>Name: {name}</p>
       <p>Quote: {quote}</p>
     </>

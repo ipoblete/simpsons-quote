@@ -32,7 +32,7 @@ export default function reducer(state = initialState, { type, payload }) {
       return {
         ...state,
         quote: payload.quote,
-        name: payload.name,
+        name: payload.character,
         image: payload.image
       };
     default:

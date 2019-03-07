@@ -21,5 +21,5 @@ export const updateImage = image => ({
 export const FETCH_FACTS = 'FETCH_FACTS';
 export const fetchFacts = () => ({
   type: FETCH_FACTS,
-  payload: fetchInfo
+  payload: fetchInfo()
 });

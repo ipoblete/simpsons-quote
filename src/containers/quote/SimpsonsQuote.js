@@ -20,21 +20,28 @@ class SimpsonsQuote extends PureComponent {
   componentDidMount() {
     this.props.fetch();
   }
-
+  
   render() {
-    return <Quote props={{ ...this.props }}/>;
+    const { image, name, quote } = this.props;
+    return <Quote
+      image={image}
+      name={name}
+      quote={quote}
+    />;
   }
 }
 
-const mapStateToProps = state => ({
-  quote: getQuote(state),
-  name: getName(state),
-  image: getImage(state)
-});
+const mapStateToProps = state => {
+  return ({
+    quote: getQuote(state),
+    name: getName(state),
+    image: getImage(state)
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
-    dispatch(fetchFacts);
+    dispatch(fetchFacts());
   }
 });
 
