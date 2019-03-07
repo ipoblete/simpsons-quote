@@ -7,9 +7,9 @@ function Quote({ quote, characterName, characterImage }) {
     <>
     <p>{quote}</p>
     <p>{characterName}</p>
-    <image>{characterImage}</image>
+    <p><img src={characterImage} /></p>
     </>
-  )
+  );
 }
 
 Quote.propTypes = {
@@ -17,3 +17,4 @@ Quote.propTypes = {
   characterName: PropTypes.string.isRequired,
   characterImage: PropTypes.string.isRequired
 };
+export default Quote;
