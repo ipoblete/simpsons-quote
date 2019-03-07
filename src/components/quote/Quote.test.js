@@ -8,6 +8,7 @@ describe('Quote', () => {
       <Quote quote={'this is a quote'} 
         characterName={'harry'}
         characterImage={'http://image.com'}
+        fetch={jest.fn()}
       />
     );
     expect(wrapper).toMatchSnapshot();

@@ -2,7 +2,9 @@
 
 exports[`Quote matches a snapshot 1`] = `
 <div>
-  <Load />
+  <Load
+    fetch={[MockFunction]}
+  />
   <h1>
     this is a quote
   </h1>
