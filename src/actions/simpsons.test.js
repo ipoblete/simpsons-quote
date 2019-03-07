@@ -1,28 +1,14 @@
 import {
-  updateQuote,
-  updateName,
-  updateImage
+  fetchFacts
 } from './simpsons';
 
+jest.mock('../services/simpsonsApi');
+
 describe('actions', () => {
-  it('returns action with quote', () => {
-    expect(updateQuote('blah')).toEqual({
-      type: 'UPDATE_QUOTE',
-      payload: 'blah'
-    });
-  });
-
-  it('returns action with name', () => {
-    expect(updateName('Marge Simpson')).toEqual({
-      type: 'UPDATE_NAME',
-      payload: 'Marge Simpson'
-    });
-  });
-
-  it('returns action with image', () => {
-    expect(updateImage('marge.com')).toEqual({
-      type: 'UPDATE_IMAGE',
-      payload: 'marge.com'
+  it('returns action with fetchInfo', () => {
+    expect(fetchFacts()).toEqual({
+      type: 'FETCH_FACTS',
+      payload: expect.any(Promise)
     });
   });
 });
