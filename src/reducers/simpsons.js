@@ -1,10 +1,10 @@
-import { FETCH_QUOTE } from '../actions/simpsons';
+import { FETCH_QUOTE, FETCH_QUOTES_LOADING } from '../actions/simpsons';
 
 const initialState = {
   quote: '',
   characterName: '',
   characterImage: '',
-  isLoading: false
+  loading: false
 };
 
 export default function reducer(state = initialState, { type, payload }) {
@@ -14,8 +14,11 @@ export default function reducer(state = initialState, { type, payload }) {
         ...state,
         quote: payload.quote,
         characterName: payload.characterName,
-        characterImage: payload.characterImage
+        characterImage: payload.characterImage,
+        loading: false
       };
+    case FETCH_QUOTES_LOADING:
+      return { ...state, loading: true };
     default:
       return state;
   }

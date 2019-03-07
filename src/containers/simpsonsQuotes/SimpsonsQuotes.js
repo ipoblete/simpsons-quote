@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Quote from '../../components/quote/Quote';
 import { connect } from 'react-redux';
-import { getQuote, getCharacterImage, getCharacterName } from '../../selectors/simpsons';
+import { getQuote, getCharacterImage, getCharacterName, isLoading } from '../../selectors/simpsons';
 import { fetchQuote } from '../../actions/simpsons';
 import Load from '../../components/quote/Load';
 import WithFetch from '../../components/quote/WithFetch';
@@ -15,7 +15,8 @@ class SimpsonsQuotes extends PureComponent {
     quote: PropTypes.string.isRequired,
     characterName: PropTypes.string.isRequired,
     characterImage: PropTypes.string.isRequired,
-    fetch: PropTypes.func.isRequired
+    fetch: PropTypes.func.isRequired,
+    loading: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -35,7 +36,8 @@ class SimpsonsQuotes extends PureComponent {
 const mapStateToProps = state => ({
   quote: getQuote(state),
   characterImage: getCharacterImage(state),
-  characterName: getCharacterName(state)
+  characterName: getCharacterName(state),
+  loading: isLoading(state)
 });
 
 const mapDispatchToProps = dispatch => ({
