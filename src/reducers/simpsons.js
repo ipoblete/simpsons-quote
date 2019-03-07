@@ -1,15 +1,20 @@
 import { FETCH_QUOTE } from '../action/simpsons';
 
 const initialState = {
-  quote: 'some quote',
+  quote:'This quote',
   characterName: 'Bart',
-  characterImage: 'link to image'
- };
+  characterImage: 'this img'
+};
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
     case FETCH_QUOTE:
-      return { ...state, getQuote: payload };
+      return { 
+        ...state, 
+        quote: payload.quote,
+        characterName: payload.character,
+        characterImage: payload.image
+      };
     default:
       return state;
   }

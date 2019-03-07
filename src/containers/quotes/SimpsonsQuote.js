@@ -2,12 +2,14 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import Quote from '../../components/quote/Quote';
 import { fetchQuote }  from '../../action/simpsons';
-import { getQuote } from '../../selectors/simpsons';
+import { getQuote, getCharacterName, getImage } from '../../selectors/simpsons';
 import PropTypes from 'prop-types';
 
 
 const mapStateToProps = state => ({
-  quote: getQuote(state)
+  quote: getQuote(state),
+  characterName: getCharacterName(state),
+  characterImage: getImage(state)
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -22,17 +24,17 @@ class SimpsonsQuote extends PureComponent {
     characterName: PropTypes.string.isRequired,
     characterImage: PropTypes.string.isRequired,
     fetch: PropTypes.func.isRequired,
-  }
+  };
 
   componentDidMount() {
     this.props.fetch();
   }
 
   render() {
-    const { quote, characterName, characterImage } =this.props;
+    const { quote, characterName, characterImage } = this.props;
     return (
       <Quote quote={quote} characterName={characterName} characterImage={characterImage} />
-    )
+    );
   }
 
 }
