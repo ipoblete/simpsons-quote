@@ -10,7 +10,7 @@ class SimpsonsQuote extends PureComponent {
     quote: PropTypes.string.isRequired,
     characterName: PropTypes.string.isRequired,
     characterImage: PropTypes.string.isRequired,
-    fetch: PropTypes.func.isRequired,
+    fetch: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -20,6 +20,7 @@ class SimpsonsQuote extends PureComponent {
   render() {
     return (
       < >
+        <button onClick={() => this.props.fetch()}>Refresh</button>
         <Quote {...this.props}/>
       </>
     );
