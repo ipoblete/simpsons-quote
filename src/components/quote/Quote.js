@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function Quote({ quote, characterName, characterImage }) {
   return (
     <div>
-      <h2>{quote}</h2>
+      <p>{quote}</p>
       <p>{characterName}</p>
       <img src={characterImage} />
     </div>
@@ -13,6 +13,6 @@ export default function Quote({ quote, characterName, characterImage }) {
 
 Quote.propTypes = {
   quote: PropTypes.string.isRequired,
-  characterImage: PropTypes.string.isRequired,
-  characterName: PropTypes.string.isRequired
+  characterName: PropTypes.string.isRequired,
+  characterImage: PropTypes.string.isRequired
 };
