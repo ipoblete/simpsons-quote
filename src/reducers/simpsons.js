@@ -11,10 +11,10 @@ export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
     case FETCH_QUOTE:
       return { ...state, 
-        quote: payload[0].quote, 
-        characterImage: payload[0].image, 
-        characterName: payload[0].name,
-        loading: false
+        quote: payload.quote, 
+        characterName: payload.characterName, 
+        characterImage: payload.characterImage, 
+        loading: false 
       };
     case FETCH_QUOTE_LOADING:
       return { ...state, loading: true };
