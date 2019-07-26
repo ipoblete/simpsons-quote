@@ -3,17 +3,17 @@
 }
 
 .quotes h2 {
+  font-family: Open Sans, sans-serif;
   text-align: center;
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
   margin: auto;
 }
 
 .quotes p {
+  font-family: Open Sans, sans-serif;
   color: black;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 0 20px;
 }
 

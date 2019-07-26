@@ -4,10 +4,10 @@
 
 .load button {
   display: block;
+  font-family: Open Sans, sans-serif;
   margin: 0 auto;
   background-color: black;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
   border-top: none;
   border-left: none;
