@@ -1,20 +1,16 @@
 .quotes {
-  background-color: black;
   height: 100vh;
 }
 
-.quotes h1 {
+.quotes h2 {
   text-align: center;
-  background-color: #f4e542;
-  color: white;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
-  margin: 0 auto;
-  border-bottom: #d3c206 solid 3px;
 }
 
-.quotes h2 {
-  color: white;
+.quotes p {
+  color: black;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0 20px;

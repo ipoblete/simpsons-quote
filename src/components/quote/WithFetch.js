@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-export default function WithFetch(Component) {
-  // eslint-disable-next-line react/prop-types
-  return function withLoading({ loading, ...props }) {
-    if(!loading) return (<Component {...props} />);
-    return (<p>Hold up - fetching The Simpsons!</p>);
-  };
-}
+export const withFetch = Component => {
+  class WithFetch extends PureComponent {
+    static propTypes = {
+      fetch: PropTypes.func.isRequired,
+    };
+
+    componentDidMount() {
+      this.props.fetch();
+    }
+
+    render() {
+      return (
+        <>
+          <Component {...this.props} />
+        </>
+      );
+    }
+  }
+  return WithFetch;
+};

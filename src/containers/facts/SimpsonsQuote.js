@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Quote from '../../components/quote/Quote';
 import { fetchQuote } from '../../actions/simpsons';
 import { getQuote, getCharacterName, getCharacterImage, isLoading } from '../../selectors/simpsons';
-import { withFetch } from '../../components/withFetch';
+import { withFetch } from '../../components/quote/withFetch';
 
 const mapStateToProps = state => ({
   quote: getQuote(state),
